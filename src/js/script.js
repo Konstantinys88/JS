@@ -22,15 +22,15 @@
 
 // console.log(personalMovieDB);
 
-    // практика ч.2 урок 20
+    // практика ч.1 урок 20
 
-if ('egor' == 'egor2') {
-    console.log('ok');
-} else {
-    console.log('Error');
-}
+// if ('egor' == 'egor2') {
+//     console.log('ok');
+// } else {
+//     console.log('Error');
+// }
 
-const num = 100;
+// const num = 100;
 
 // if (num < 49) {
 //     console.log('Error');
@@ -42,15 +42,34 @@ const num = 100;
 
 // (num == 50) ? console.log('ok') : console.log('error');
 
-switch (num) {
-    case 49: console.log('k1');
-    break;
-    case 48: console.log('k2');
-    break;
-    case 50: console.log('k3');
-    break;
-    case 51: console.log('k4');
-    break;
-    default: console.log('noooooo');
-    break;
+// switch (num) {
+//     case 49: console.log('k1');
+//     break;
+//     case 48: console.log('k2');
+//     break;
+//     case 50: console.log('k3');
+//     break;
+//     case 51: console.log('k4');
+//     break;
+//     default: console.log('noooooo');
+//     break;
+// }
+
+        // практика ч.1 урок 2
+
+const hamburger = 0;
+const fries = null;
+const cola = 0;
+
+console.log(hamburger || cola || fries );
+
+if (hamburger || cola || fries) {
+    console.log('eats');
+} else {
+    console.log('not eats');
 }
+
+console.log(1 && 0);
+console.log(1 && 5);
+console.log(null && 5);
+console.log(0 && 'rewfdvdrg');
