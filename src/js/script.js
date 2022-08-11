@@ -126,3 +126,18 @@ while (i <= 16){
     }
 }
 
+// Заполните массив цифрами от 5 до 10 включительно. Помните, что элементы массива можно сформировать так же, как и обращаться к ним: arr[0]
+
+const arrayOfNumbers = [];
+for (let i = 5;i < 11;i++){
+    arrayOfNumbers[i - 5] = i; //i-5 высчитывает индекс ячейки в которуюзаписывается число
+}
+console.log(arrayOfNumbers);
+
+let arr = [];
+arr[0] = 'one';
+arr[3] = 'three';
+console.log(arr);
+
+
+
