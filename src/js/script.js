@@ -139,5 +139,32 @@ arr[0] = 'one';
 arr[3] = 'three';
 console.log(arr);
 
+first: for (let i = 0; i < 3; i++){
+    console.log(`one: ${i}`);
+    for (let j = 0; j < 3; j++){
+        console.log(`two: ${j}`);
+        for (let k = 0; k < 3; k++){
+            if (k === 2) continue first;
+            console.log(`Thre: ${k}`);
+        }    
+    }
+}
+
+let result = '';
+const length = 7;
+
+for (let i = 1; i < 7; i++ ) {
+    for (let j = 0; j < 6; j++ ){
+        result += ' *';
+    }
+    result += '\n';
+}
+
+console.log(result);
+
+
+
+
+
 
 
