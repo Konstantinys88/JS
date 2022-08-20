@@ -26,6 +26,67 @@ console.log(calculateVolumeAndArea(15.5));
 console.log(calculateVolumeAndArea(-15));
 console.log(calculateVolumeAndArea("154"));
 
+// У вас есть готовый объект с данными. Разработчик Х хочет написать часть функционала, но ему не хватает навыков. Выполните часть заданий за него.
+// Задачи:
+// 1) Напишите функцию showExperience, которая будет принимать в себя объект со всеми данными и возвращать строку с опытом.
+// Пример:
+// showExperience(personalPlanPeter) => '1 month'
+// P.S. желательно использовать деструктуризацию, но не обязательно
+// 2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
+// Пример:
+// showProgrammingLangs(personalPlanPeter)  =>
+// "Язык js изучен на 20% Язык php изучен на 10%"
+// Причем функция должна работать вне зависимости от количества языков. Если ни один не указан, то возвращается пустая строка.
+// P.S. Для переноса строки используется \n в конце строки.
+// 3) Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.
+// Пример:
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter)
+// => 'Мне 29 и я владею языками: RU ENG'
+// Заметьте, что возраст и языки подставляются автоматически из объекта, а языки всегда в верхнем регистре (большими буквами). Если данные в объекте поменяются, то и сообщение тоже изменится.
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "28",
+    skills: {
+        languages: ['ru', 'eng', 'ua'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
+    },
+    showAgeAndLangs: function(plan){
+        let res = `Мне ${plan.age} и я владею языками: `;
+        plan.skills.languages.forEach(function(el, i) {
+            res += `${el.toUpperCase()} `;
+        });
+        return  res;
+        }
+    };
+
+
+console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+
+// console.log(personalPlanPeter.skills.programmingLangs.js);
+
+function showExperience(plan) {
+    //нужны проверки на то есть ли вообще эти своиства
+    return plan.skills.exp;
+}
+
+console.log(showExperience(personalPlanPeter));
+
+function showProgrammingLangs(plan) {
+    let res = "";
+    for (let key in plan.skills.programmingLangs){
+        res += `Язык ${key} изучен на ${plan.skills.programmingLangs[key]}\n`;  
+    }
+    return res;
+}
+
+console.log(showProgrammingLangs(personalPlanPeter));
+
+
 
 
 
