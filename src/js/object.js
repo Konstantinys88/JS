@@ -38,3 +38,20 @@ console.log(border);
 // }
 
 // console.log(counter);
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
+    }
+};
+
+for (let key in personalPlanPeter.skills.programmingLangs){
+        console.log(`Язык ${key} изучен на ${personalPlanPeter.skills.programmingLangs[key]}`);  
+}
